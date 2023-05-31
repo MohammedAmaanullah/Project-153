@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+        <script src="./Rotation.js"></script>
+
+    </head>
+    <body>
+        <a-scene>
+            <a-assets timeout="5000">
+                <a-asset-item id="diver" src="./assets/Diver/diver.glb"></a-asset-item>
+                <a-asset-item id="island" src="./assets/island/island.glb"></a-asset-item>
+            </a-assets>
+            
+            <a-entity gltf-model="#diver" scale="0.1 0.1 0.1" position="5 0 15" rotation="0 90 -20" diver-rotation-reader></a-entity>
+            <a-entity gtlf-model="#island" scale="0.25 0.25 0.25" position="0 0 0" island-rotation-reader></a-entity>
+            <a-sky color="blue"></a-sky>
+        </a-scene>
+    </body>
+</html>
